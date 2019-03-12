@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApp.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>    
+</head>
+        <script type="text/javascript" src='<%=ResolveUrl("~/Scripts/jquery-3.2.1.min.js") %>'></script>
+<body>
+    <form id="form1" runat="server">       
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                <Items>
+                    <asp:MenuItem Text="Home" navigateurl="Default.aspx" Value="Menu0"></asp:MenuItem>
+                    <asp:MenuItem Text="Downloader" navigateurl="Downloader.aspx" Value="Menu1"></asp:MenuItem>
+                    <asp:MenuItem text="GridView" navigateurl="GridView.aspx" Value="Menu2"></asp:MenuItem>
+                    <asp:MenuItem text="Scheduler" navigateurl="Scheduler.aspx" Value="Menu3"></asp:MenuItem>
+                    <asp:MenuItem text="Settings" navigateurl="Settings.aspx" Value="Menu5"></asp:MenuItem>                    
+                </Items>
+            </asp:Menu>
+        <hr />
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+    </form>
+</body>
+</html>
