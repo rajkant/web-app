@@ -1,1 +1,1 @@
-build '/web-app'
+build '/WebApp.sln'
